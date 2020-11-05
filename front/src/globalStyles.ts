@@ -9,40 +9,38 @@ body {
   font-family: Helvetica;
   padding: 0px;
   margin: 0px;
+  background: #D9DBD5;
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
     
  ::-webkit-scrollbar {
-  width: 6px;
+  width: 5px;
   background-color: rgba(0,0,0,0);
-  -webkit-border-radius: 100px;
+  -webkit-border-radius: 0px;
 }
 ::-webkit-scrollbar:hover {
   background-color: rgba(0, 0, 0, 0.09);
 }
 ::-webkit-scrollbar-thumb:vertical {
-  -webkit-border-radius: 100px;
-  background: rgba(0,0,0,0.5);
+  -webkit-border-radius: 0px;
+  background: #CCCCCC;
 }
 ::-webkit-scrollbar-thumb:vertical:active {
-  -webkit-border-radius: 100px;
-  background: rgba(0,0,0,0.61);
+  -webkit-border-radius: 0px;
+  background: #CCCCCC;
 }
 ::-webkit-scrollbar {
   width: 8px;
   background-color: rgba(0,0,0,0);
-  -webkit-border-radius: 100px;
+  -webkit-border-radius: 0px;
 }
 ::-webkit-scrollbar:hover {
-  background-color: rgba(0, 0, 0, 0.09);
+  background-color: #FFF;
 }
 ::-webkit-scrollbar-thumb:vertical {
-  -webkit-border-radius: 100px;
-  background: rgba(0, 0, 0, 0.5);
-}
-::-webkit-scrollbar-thumb:vertical:active {
-  -webkit-border-radius: 100px;
-  background: rgba(0,0,0,0.61);
+  -webkit-border-radius: 0px;
+  background: #CCCCCC;
 }
 }
 `;

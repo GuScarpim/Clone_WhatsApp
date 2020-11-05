@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    background: #D9DBD5;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 50px;
 
     header {
       background: #119688;
@@ -17,8 +17,15 @@ export const Container = styled.div`
 `
 
 export const Content = styled.div`
-    /* display: flex; */
-    /* justify-content: center; */
+    display: flex;
+    justify-content: center;
+    margin-top: -110px;
+
+    @media only screen and (max-width: 1430px) {
+      flex: none;
+      justify-content: none;
+      margin-top: 0;
+    }
 
 `
 
