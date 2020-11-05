@@ -7,7 +7,6 @@ export const Container = styled.div`
   flex-direction: column;
   max-width: 1435px;
   min-width: 645px;
-  box-shadow: 0 1px 1px 0 rgba(#2E2E2E,.06),0 2px 5px 0 rgba(var(--shadow-rgb),.2);
   animation: _2rw5W .3s cubic-bezier(.1,.82,.25,1);
   
   @keyframes _2rw5W {
@@ -31,8 +30,8 @@ export const Sidenav = styled.div`
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #119688;
-  overflow-x: hidden;
+  background-color: #FFFFF915;
+  overflow: hidden;
 
   @media only screen and (max-width: 840px) {
     width: 259px;
@@ -41,10 +40,9 @@ export const Sidenav = styled.div`
 
 export const Header = styled.div`
   background: #EDEDED;
-  border-bottom: none;
-  border-top: none;
+  border: 1px solid #DADADA;
   border-right: 2px solid #DADADA;
-  border-left: none;
+  box-shadow: 10px 1px 1px 10px rgba(#2E2E2E,.06),0 2px 5px 0 rgba(#000,.2);
   position: absolute;
   top: 0;
   z-index: 999;
@@ -56,13 +54,47 @@ export const Header = styled.div`
   padding: 10px 16px;
 `
 
+export const ScrollView = styled.div`
+  overflow: auto;
+  height: 100%;
+
+  ::-webkit-scrollbar {
+    width: 4px !important;
+    background-color: rgba(0,0,0,0);
+    -webkit-border-radius: 0px;
+  }
+  ::-webkit-scrollbar:hover {
+    background-color: rgba(0, 0, 0, 0.09);
+  }
+  ::-webkit-scrollbar-thumb:vertical {
+    -webkit-border-radius: 0px;
+    background: #CCCCCC;
+  }
+  ::-webkit-scrollbar-thumb:vertical:active {
+    -webkit-border-radius: 0px;
+    background: #CCCCCC;
+  }
+  ::-webkit-scrollbar {
+    width: 5px;
+    background-color: rgba(0,0,0,0);
+    -webkit-border-radius: 0px;
+  }
+  ::-webkit-scrollbar:hover {
+    background-color: #FFF;
+  }
+  ::-webkit-scrollbar-thumb:vertical {
+    -webkit-border-radius: 0px;
+    background: #CCCCCC;
+  }
+`
+
 export const Perfil = styled.div`
   height: 40px;
   width: 46px;
   font-size: 14px;
   cursor: pointer;
   border-radius: 50px;
-  background-color: #EDED;
+  background-color: #acacac4d;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -88,41 +120,6 @@ export const Items = styled.div`
       background: #99999947;
     }
   }
-`
-
-export const Main = styled.div`
-  height: 100vh;
-  max-width: 70.8%;
-  min-width: 389px;
-  position: relative;
-  z-index: 1;
-  top: -100vh;
-  left: 29.3%;
-  background-color: #9DE1FE;
-  overflow-x: hidden;
-
-  @media only screen and (max-width: 1399px) {
-    left: 30%;
-  }
-
-  @media only screen and (max-width: 840px) {
-    left: 258px;
-  }
-`
-
-export const HeaderMain = styled.div`
-  background: #EDEDED;
-  position: absolute;
-  top: 0;
-  z-index: 999;
-  display: flex;
-  flex: none;
-  align-items: center;
-  justify-content: flex-start;
-  box-sizing: border-box;
-  width: 100%;
-  height: 59px;
-  padding: 10px 16px;
 `
 
 export const Number = styled.div`
