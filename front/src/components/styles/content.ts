@@ -56,7 +56,11 @@ export const Main = styled.div`
   }
 
   article {
-    margin: 0px 20px 20px 20px;
+    margin: 0px 0px 20px 30px;
+
+    @media only screen and (max-width: 1430px) {
+    margin: 0px 30px 20px 30px;
+    }
   }
 `
 
@@ -95,7 +99,7 @@ export const Header = styled.div`
 
 export const Perfil = styled.div`
   height: 100%;
-  width: 50px;
+  width: 48px;
   font-size: 14px;
   cursor: pointer;
   border-radius: 50px;
