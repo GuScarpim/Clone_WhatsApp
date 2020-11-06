@@ -10,7 +10,7 @@ export default function Card() {
       <S.Sidenav>
         <S.Header>
           <S.Perfil>
-            GS
+            <img src="https://avatars1.githubusercontent.com/u/47616551?s=460&u=f9f81df034252d349d5c631a85cd57ea603beefa&v=4" alt="Perfil" /> 
           </S.Perfil>
           <S.Items>
             <span>
