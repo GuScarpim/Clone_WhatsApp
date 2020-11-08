@@ -99,14 +99,21 @@ export const Header = styled.div`
 
 export const Perfil = styled.div`
   height: 100%;
-  width: 48px;
+  width: 50px;
   font-size: 14px;
+  margin-left: 10px;
   cursor: pointer;
   border-radius: 50px;
-  background: #acacac4d;
+  background-color: #acacac4d;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+  }
 `
 
 export const Number = styled.div`

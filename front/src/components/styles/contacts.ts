@@ -19,7 +19,9 @@ export const Perfil = styled.div`
   }
 `
 
-export const Contacts = styled.div`
+export const Contacts = styled.button`
+  border: none;
+  width: 100%;
   display: flex;
   align-items: center;
   background: #EDEDED;
@@ -41,6 +43,12 @@ export const Contacts = styled.div`
     margin-top: 4px;
     width: 70%;
     
+    span {
+      display: flex;
+      justify-content: flex-start;
+      font-size: 17px;
+    }
+
     small {
       position: relative;
       width: 100%;
@@ -50,6 +58,7 @@ export const Contacts = styled.div`
       color: #6B6866;
       text-overflow: ellipsis;
       display: flex;
+      font-size: 14px;
       align-items: center;
       padding-bottom: 5px;
       border-bottom: 1px solid #6b686629;
