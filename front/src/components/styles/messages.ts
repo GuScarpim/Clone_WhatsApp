@@ -7,6 +7,7 @@ export const Container = styled.div`
   height: 100%;
   min-height: 87vh;
   position: relative;
+  overflow: auto;
 
    aside {
     display: flex;
@@ -76,5 +77,15 @@ export const MessageLeft = styled.div`
   border-top: 10px solid #DCF8C6;
 }
 `
+export const ContainerMessages = styled.div` 
+  height: 90vh;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  top: -30px;
+  margin: 0px 0px 0px 0px;
 
+
+`
 /* Colors: #119688 #D9DBD5 #EDEDED #DCF8C6 #ACACAC #9DE1FE */

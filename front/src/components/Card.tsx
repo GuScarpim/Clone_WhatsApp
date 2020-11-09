@@ -1,16 +1,190 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as S from './styles/card';
 
 import Contacts from './Contacts';
 import Contents from './Contents';
 
+interface newContacts {
+  perfil: string;
+  name: string;
+  message: string;
+  thumbnail: string;
+  id: string;
+  view: boolean;
+}
+
+
 export default function Card() {
+  const [contacts, setContacts] = useState<newContacts[]>([
+    {
+      thumbnail: "https://avatars1.githubusercontent.com/u/47616551?s=460&u=f9f81df034252d349d5c631a85cd57ea603beefa&v=4",
+      perfil: "",
+      name: "Gustavo Scarpim",
+      message: "Clonando WathsApp",
+      view: true,
+      id: "Gustavo Scarpim"
+    },
+    {
+      perfil: "SP",
+      thumbnail: "",
+      name: "Scarpim Prof",
+      message: "Olá, tudo bem?",
+      view: false,
+      id: "Scarpim Prof"
+    },
+    {
+      perfil: "DG",
+      thumbnail: "",
+      name: "Diogo Genuino",
+      message: "Hahahaha",
+      view: true,
+      id: "Diogo Genuino"
+    },
+    {
+      perfil: "NT",
+      thumbnail: "",
+      name: "Natan Teves",
+      message: "Opa",
+      view: false,
+      id: "Natan Teves"
+    },
+    {
+      perfil: "BR",
+      thumbnail: "",
+      name: "Brasil",
+      message: "Pelé",
+      view: false,
+      id: "Brasil"
+    },
+    {
+      perfil: "RM",
+      thumbnail: "",
+      name: "Rodrigo Marcelo",
+      message: "Eae!",
+      view: true,
+      id: "Rodrigo Marcelo"
+    },
+    {
+      perfil: "JS",
+      thumbnail: "",
+      name: "Jacaré Sujo",
+      message: "Nham Nham Nham Nham",
+      view: true,
+      id: "Jacaré Sujo"
+    },
+    {
+      perfil: "CQ",
+      thumbnail: "",
+      name: "Cachorro Quente",
+      message: "Opa",
+      view: true,
+      id: "Cachorro Quente"
+    },
+    {
+      perfil: "RP",
+      thumbnail: "",
+      name: "Risadas Palhaço",
+      message: "KKKKKKKK",
+      view: true,
+      id: "Risadas Palhaço"
+    },
+    {
+      perfil: "FM",
+      thumbnail: "",
+      name: "Fatal Mortal",
+      message: "Uhuuuu",
+      view: false,
+      id: "Fatal Mortal"
+    },
+    {
+      perfil: "GS",
+      thumbnail: "",
+      name: "Gustavo Scarpim2",
+      message: "Clonando WathsApp",
+      view: true,
+      id: "Gustavo Scarpim2"
+    },
+    {
+      perfil: "SP",
+      thumbnail: "",
+      name: "Scarpim Prof2",
+      message: "Olá, tudo bem?",
+      view: false,
+      id: "Scarpim Prof2"
+    },
+    {
+      perfil: "DG",
+      thumbnail: "",
+      name: "Diogo Genuino2",
+      message: "Hahahaha",
+      view: true,
+      id: "Diogo Genuino2"
+    },
+    {
+      perfil: "NT",
+      thumbnail: "",
+      name: "Natan Teves2",
+      message: "Opa",
+      view: false,
+      id: "Natan Teves2"
+    },
+    {
+      perfil: "BR",
+      thumbnail: "",
+      name: "Brasil2",
+      message: "Pelé",
+      view: false,
+      id: "Brasil2"
+    },
+    {
+      perfil: "RM",
+      thumbnail: "",
+      name: "Rodrigo Marcelo2",
+      message: "Eae!",
+      view: true,
+      id: "Rodrigo Marcelo2"
+    },
+    {
+      perfil: "JS",
+      thumbnail: "",
+      name: "Jacaré Sujo2",
+      message: "Nham Nham Nham Nham",
+      view: true,
+      id: "Jacaré Sujo2"
+    },
+    {
+      perfil: "CQ",
+      thumbnail: "",
+      name: "Cachorro Quente2",
+      message: "Opa",
+      view: true,
+      id: "Cachorro Quente2"
+    },
+    {
+      perfil: "RP",
+      thumbnail: "",
+      name: "Risadas Palhaço2",
+      message: "KKKKKKKK",
+      view: true,
+      id: "Risadas Palhaço2"
+    },
+    {
+      perfil: "FM",
+      thumbnail: "",
+      name: "Fatal Mortal2",
+      message: "Uhuuuu",
+      view: false,
+      id: "Fatal Mortal2"
+    },
+  ]);
+
+  const [perfilId, setPerfilId] = useState("AAAAAAAAAAAAAA");
   return (
     <S.Container>
       <S.Sidenav>
         <S.Header>
           <S.Perfil>
-            <img src="https://avatars1.githubusercontent.com/u/47616551?s=460&u=f9f81df034252d349d5c631a85cd57ea603beefa&v=4" alt="Perfil" /> 
+            <img src="https://avatars1.githubusercontent.com/u/47616551?s=460&u=f9f81df034252d349d5c631a85cd57ea603beefa&v=4" alt="Perfil" />
           </S.Perfil>
           <S.Items>
             <span>
@@ -35,12 +209,31 @@ export default function Card() {
         </S.Header>
 
         <S.ScrollView>
-          <Contacts />
+          {contacts.map((item, index) => (
+            <Contacts
+              thumbnail={item.thumbnail}
+              perfil={item.perfil}
+              check={item.view ? "#4FC3F7" : "#B7B7B7"}
+              name={item.name}
+              message={item.message}
+              changeMessage={() => setPerfilId(item.id)}
+            />
+          ))}
         </S.ScrollView>
 
       </S.Sidenav>
-
-      <Contents />
+      {contacts.map((item, index) => (
+        <>
+          {perfilId === item.id &&
+            <Contents
+              perfil={item.perfil}
+              thumbnail={item.thumbnail}
+              name={item.name}
+              id={item.id}
+            />
+          }
+        </>
+      ))}
 
     </S.Container>
   )

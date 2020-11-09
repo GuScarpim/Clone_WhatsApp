@@ -24,6 +24,7 @@ export const Content = styled.div`
     @media only screen and (max-width: 1430px) {
       flex: none;
       justify-content: none;
+      height: 100vh;
       margin-top: 0;
     }
 
