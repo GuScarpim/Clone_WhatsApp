@@ -37,17 +37,10 @@ export const MessageRight = styled.div`
 
   &::after {
     content: "";
-    left: -7px;
-    /* border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-    border-bottom-left-radius: 40px; */
+    left: -10px;
     top: 0px;
-    z-index: 99999;
+    z-index: 9999;
     position: absolute;
-    /* width: 14px; */
-    /* height: 10px; */
-    /* background: #FFF; */
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-top: 10px solid #FFF;
@@ -61,10 +54,14 @@ export const MessageLeft = styled.div`
   color:  #4D4D4D;
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 12px;
   border-radius: 8px;
   position: relative;
   margin-bottom: 15px;
+
+  @media only screen and (max-width: 1430px) {
+    margin-left: 130px;
+  }
 
   &::after {
   content: "";
@@ -79,13 +76,10 @@ export const MessageLeft = styled.div`
 `
 export const ContainerMessages = styled.div` 
   height: 90vh;
+  width: 100%;
   overflow: auto;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  top: -30px;
   margin: 0px 0px 0px 0px;
 
-
 `
-/* Colors: #119688 #D9DBD5 #EDEDED #DCF8C6 #ACACAC #9DE1FE */

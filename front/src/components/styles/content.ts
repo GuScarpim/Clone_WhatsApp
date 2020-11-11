@@ -59,7 +59,7 @@ export const Main = styled.div`
     margin: 0px 0px 20px 30px;
 
     @media only screen and (max-width: 1430px) {
-    margin: 0px 30px 20px 30px;
+    margin: 0px 15px 20px 20px;
     }
   }
 `
