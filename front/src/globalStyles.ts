@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
 
   ::-webkit-scrollbar {
     width: 6px;
-    background-color: #FFF;
+    background-color: #CCCCCC;
     -webkit-border-radius: 0px;
   }
   ::-webkit-scrollbar:hover {
@@ -24,11 +24,10 @@ const GlobalStyle = createGlobalStyle`
   ::-webkit-scrollbar {
     width: 7px;
     height: 8px;
-    background-color: #FFF
-    -webkit-border-radius: 0px;
+    background-color: #CCCCCC
   }
   ::-webkit-scrollbar:hover {
-    background-color: #FFF;
+    background-color: #CCCCCC;
   }
   ::-webkit-scrollbar-thumb:vertical {
     -webkit-border-radius: 0px;
@@ -43,6 +42,11 @@ const GlobalStyle = createGlobalStyle`
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
+
+    @media only screen and (max-width: 1435px) {
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
   }
 `
 

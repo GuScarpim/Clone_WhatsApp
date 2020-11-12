@@ -19,7 +19,7 @@ export const Container = styled.div`
 export const Content = styled.div`
     display: flex;
     justify-content: center;
-    margin-top: -110px;
+    margin-top: -90px;
 
     @media only screen and (max-width: 1430px) {
       flex: none;

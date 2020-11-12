@@ -7,6 +7,12 @@ type Props = {
   thumbnail: string,
   name: string,
   id: string,
+  array: {
+    message: string,
+    direction: string,
+    date: string
+  }[]
+  view: Boolean,
 }
 
 export default function Card(props: Props) {
@@ -41,7 +47,10 @@ export default function Card(props: Props) {
           </S.Header>
 
           <article>
-            <Messages />
+            <Messages
+              array={props.array}
+              view={props.view}
+            />
           </article>
 
 

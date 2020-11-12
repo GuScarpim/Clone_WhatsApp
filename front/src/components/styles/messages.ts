@@ -2,12 +2,14 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: column-reverse;
   width: 100%;
-  height: 100%;
-  min-height: 87vh;
-  position: relative;
-  overflow: auto;
+  height: 78vh;
+
+  @media only screen and (max-width: 1430px) {
+    height: 88vh;
+  }
+  /* min-height: 87vh; */
+  /* position: relative; */
 
    aside {
     display: flex;
@@ -37,7 +39,7 @@ export const MessageRight = styled.div`
 
   &::after {
     content: "";
-    left: -10px;
+    left: -6px;
     top: 0px;
     z-index: 9999;
     position: absolute;
@@ -65,7 +67,7 @@ export const MessageLeft = styled.div`
 
   &::after {
   content: "";
-  right: -5px;
+  right: -6px;
   top: 0px;
   z-index: 99999;
   position: absolute;
@@ -75,11 +77,8 @@ export const MessageLeft = styled.div`
 }
 `
 export const ContainerMessages = styled.div` 
-  height: 90vh;
+  height: 100%;
   width: 100%;
-  overflow: auto;
   display: flex;
-  flex-direction: column;
-  margin: 0px 0px 0px 0px;
-
+  flex-direction: column-reverse;
 `

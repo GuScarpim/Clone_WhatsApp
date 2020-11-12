@@ -24,7 +24,7 @@ export const Contacts = styled.button`
   width: 100%;
   display: flex;
   align-items: center;
-  background: #EDEDED;
+  background: #FFF;
   height: 62px;
   cursor: pointer;
 

@@ -1,18 +1,20 @@
 import styled from 'styled-components';
 
 export const Main = styled.div`
-  height: 100vh;
+  height: 90vh;//100vh
   max-width: 70.8%;
   min-width: 389px;
   position: relative;
   z-index: 1;
-  margin-top: -100vh;
+  margin-top: -95vh;//100vh
   left: 29.3%;
   background-color: #000;
   overflow-x: hidden;
 
-  @media only screen and (max-width: 1399px) {
+  @media only screen and (max-width: 1430px) {
     left: 30%;
+    height: 100vh;
+    margin-top: -100vh;
   }
 
   @media only screen and (max-width: 840px) {
