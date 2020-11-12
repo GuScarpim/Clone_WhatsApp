@@ -4,10 +4,10 @@ import * as S from './styles/messages';
 type Props = {
   array: {
     message: string,
-    direction: string
+    direction: string,
+    date: string,
   }[]
   view: Boolean,
-  date: String
 }
 
 export default function Messages(props: Props) {
@@ -21,7 +21,7 @@ export default function Messages(props: Props) {
               <S.MessageRight>
                   {item.message}
                 <aside>
-                  <small>{props.date}</small>
+                  <small>{item.date}</small>
                   <span>
                     <svg xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 18 18" width="18" height="18">
@@ -34,7 +34,7 @@ export default function Messages(props: Props) {
               <S.MessageLeft>
                 {item.message}
                 <aside>
-                  <small>{props.date}</small>
+                  <small>{item.date}</small>
                   <span>
                     <svg xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 18 18" width="18" height="18">

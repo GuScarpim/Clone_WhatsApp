@@ -6,8 +6,8 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 1435px;
-  /* min-width: 645px; */
-  overflow: auto;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .06),0 2px 5px 0 rgba(0, 0, 0,.2);
+  overflow: hidden;
   animation: _2rw5W .3s cubic-bezier(.1,.82,.25,1);
   
   @keyframes _2rw5W {
@@ -23,7 +23,7 @@ export const Container = styled.div`
 `
 
 export const Sidenav = styled.div`
-  height: 100vh;
+  height: 95vh; //100vh
   width: 30%;
   max-width: 420px;
   min-width: 259px;
@@ -34,6 +34,10 @@ export const Sidenav = styled.div`
   background-color: #FFFFF915;
   overflow: hidden;
 
+  @media only screen and (max-width: 1430px) {
+   height: 100vh; //100vh
+  }
+  
   @media only screen and (max-width: 840px) {
     width: 259px;
   }

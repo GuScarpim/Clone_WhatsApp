@@ -9,10 +9,10 @@ type Props = {
   id: string,
   array: {
     message: string,
-    direction: string
+    direction: string,
+    date: string
   }[]
   view: Boolean,
-  date: String,
 }
 
 export default function Card(props: Props) {
@@ -50,7 +50,6 @@ export default function Card(props: Props) {
             <Messages
               array={props.array}
               view={props.view}
-              date={props.date}
             />
           </article>
 

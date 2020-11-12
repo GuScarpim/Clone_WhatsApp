@@ -44,8 +44,8 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
 
     @media only screen and (max-width: 1435px) {
-      overflow: auto;
-      min-width: 120vw;
+      overflow-x: hidden;
+      overflow-y: auto;
     }
   }
 `
