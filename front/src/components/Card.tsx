@@ -11,10 +11,184 @@ interface newContacts {
   thumbnail: string;
   id: string;
   view: boolean;
+  array: {
+    message: string,
+    direction: string
+  }[]
+}
+
+interface newMessage {
+  id: string;
+  direction: string,
+  view: boolean,
+  text: string,
+  date: string,
 }
 
 
 export default function Card() {
+  const [messages, setMessages] = useState<newMessage[]>([
+    {
+      text: "",
+      date: "12:25",
+      view: true,
+      direction: "right",
+      id: "Gustavo Scarpim",
+    },
+
+    {
+      text: "Scarpim Prof",
+      date: "Olá, tudo bem12:25",
+      view: true,
+      direction: "right",
+      id: "Scarpim Prof",
+    },
+
+    {
+      text: "Diogo Genuino",
+      date: "12:25",
+      view: false,
+      direction: "right",
+      id: "Diogo Genuino",
+    },
+
+    {
+      text: "Natan Teves",
+      date: "12:25",
+      view: true,
+      direction: "right",
+      id: "Natan Teves",
+    },
+
+    {
+      text: "Brasil",
+      date: "12:25",
+      view: true,
+      direction: "right",
+      id: "Brasil",
+    },
+
+    {
+      text: "Rodrigo Marcelo",
+      date: "Eae12:25",
+      view: false,
+      direction: "right",
+      id: "Rodrigo Marcelo",
+    },
+
+    {
+      text: "Jacaré Sujo",
+      date: "Nham Nham Nham 12:25",
+      view: false,
+      direction: "right",
+      id: "Jacaré Sujo",
+    },
+
+    {
+      text: "Cachorro Quente",
+      date: "12:25",
+      view: false,
+      direction: "right",
+      id: "Cachorro Quente",
+    },
+
+    {
+      text: "Risadas Palhaço",
+      date: "12:25",
+      view: false,
+      direction: "right",
+      id: "Risadas Palhaço",
+    },
+
+    {
+      text: "Fatal Mortal",
+      date: "12:25",
+      view: true,
+      direction: "right",
+      id: "Fatal Mortal",
+    },
+
+    {
+      text: "Gustavo Scarpim2",
+      date: "Clonando 12:25",
+      view: false,
+      direction: "right",
+      id: "Gustavo Scarpim2",
+    },
+
+    {
+      text: "Scarpim Prof2",
+      date: "Olá, tudo bem12:25",
+      view: true,
+      direction: "right",
+      id: "Scarpim Prof2",
+    },
+
+    {
+      text: "Diogo Genuino2",
+      date: "12:25",
+      view: false,
+      direction: "right",
+      id: "Diogo Genuino2",
+    },
+
+    {
+      text: "Natan Teves2",
+      date: "12:25",
+      view: true,
+      direction: "right",
+      id: "Natan Teves2",
+    },
+
+    {
+      text: "Brasil2",
+      date: "12:25",
+      view: true,
+      direction: "right",
+      id: "Brasil2",
+    },
+
+    {
+      text: "Rodrigo Marcelo2",
+      date: "Eae12:25",
+      view: false,
+      direction: "right",
+      id: "Rodrigo Marcelo2",
+    },
+
+    {
+      text: "Jacaré Sujo2",
+      date: "Nham Nham Nham 12:25",
+      view: false,
+      direction: "right",
+      id: "Jacaré Sujo2",
+    },
+
+    {
+      text: "Cachorro Quente2",
+      date: "12:25",
+      view: false,
+      direction: "right",
+      id: "Cachorro Quente2",
+    },
+
+    {
+      text: "Risadas Palhaço2",
+      date: "12:25",
+      view: false,
+      direction: "right",
+      id: "Risadas Palhaço2",
+    },
+
+    {
+      text: "Fatal Mortal2",
+      date: "12:25",
+      view: true,
+      direction: "right",
+      id: "Fatal Mortal2",
+    },
+  ])
+
   const [contacts, setContacts] = useState<newContacts[]>([
     {
       thumbnail: "https://avatars1.githubusercontent.com/u/47616551?s=460&u=f9f81df034252d349d5c631a85cd57ea603beefa&v=4",
@@ -22,163 +196,283 @@ export default function Card() {
       name: "Gustavo Scarpim",
       message: "Clonando WathsApp",
       view: true,
-      id: "Gustavo Scarpim"
+      id: "Gustavo Scarpim",
+      array: [
+        { message: "Mensagem 1 do Gustavo Scarpim", direction: "right" },
+        { message: "Mensagem 2 do Gustavo Scarpim", direction: "left" },
+        { message: "Mensagem 3 do Gustavo Scarpim", direction: "right" },
+      ]
     },
+
     {
       perfil: "SP",
       thumbnail: "",
       name: "Scarpim Prof",
       message: "Olá, tudo bem?",
       view: false,
-      id: "Scarpim Prof"
+      id: "Scarpim Prof",
+      array: [
+        { message: "Mensagem 1 do Scarpim Prof", direction: "right" },
+        { message: "Mensagem 2 do Scarpim Prof", direction: "left" },
+        { message: "Mensagem 3 do Scarpim Prof", direction: "right" },
+      ]
     },
+
     {
       perfil: "DG",
       thumbnail: "",
       name: "Diogo Genuino",
       message: "Hahahaha",
       view: true,
-      id: "Diogo Genuino"
+      id: "Diogo Genuino",
+      array: [
+        { message: "Mensagem 1 do Diogo Genuino", direction: "right" },
+        { message: "Mensagem 2 do Diogo Genuino", direction: "left" },
+        { message: "Mensagem 3 do Diogo Genuino", direction: "right" },
+      ]
     },
+
     {
       perfil: "NT",
       thumbnail: "",
       name: "Natan Teves",
       message: "Opa",
       view: false,
-      id: "Natan Teves"
+      id: "Natan Teves",
+      array: [
+        { message: "Mensagem 1 do Natan Teves", direction: "right" },
+        { message: "Mensagem 2 do Natan Teves", direction: "left" },
+        { message: "Mensagem 3 do Natan Teves", direction: "right" },
+      ]
     },
+
     {
       perfil: "BR",
       thumbnail: "",
       name: "Brasil",
       message: "Pelé",
       view: false,
-      id: "Brasil"
+      id: "Brasil",
+      array: [
+        { message: "Mensagem 1 do Brasil", direction: "right" },
+        { message: "Mensagem 2 do Brasil", direction: "left" },
+        { message: "Mensagem 3 do Brasil", direction: "right" },
+      ]
     },
+
     {
       perfil: "RM",
       thumbnail: "",
       name: "Rodrigo Marcelo",
       message: "Eae!",
       view: true,
-      id: "Rodrigo Marcelo"
+      id: "Rodrigo Marcelo",
+      array: [
+        { message: "Mensagem 1 do Rodrigo Marcelo", direction: "right" },
+        { message: "Mensagem 2 do Rodrigo Marcelo", direction: "left" },
+        { message: "Mensagem 3 do Rodrigo Marcelo", direction: "right" },
+      ]
     },
+
     {
       perfil: "JS",
       thumbnail: "",
       name: "Jacaré Sujo",
       message: "Nham Nham Nham Nham",
       view: true,
-      id: "Jacaré Sujo"
+      id: "Jacaré Sujo",
+      array: [
+        { message: "Mensagem 1 do Jacaré Sujo", direction: "right" },
+        { message: "Mensagem 2 do Jacaré Sujo", direction: "left" },
+        { message: "Mensagem 3 do Jacaré Sujo", direction: "right" },
+      ]
     },
+
     {
       perfil: "CQ",
       thumbnail: "",
       name: "Cachorro Quente",
       message: "Opa",
       view: true,
-      id: "Cachorro Quente"
+      id: "Cachorro Quente",
+      array: [
+        { message: "Mensagem 1 do Cachorro Quente", direction: "right" },
+        { message: "Mensagem 2 do Cachorro Quente", direction: "left" },
+        { message: "Mensagem 3 do Cachorro Quente", direction: "right" },
+      ]
     },
+
     {
       perfil: "RP",
       thumbnail: "",
       name: "Risadas Palhaço",
       message: "KKKKKKKK",
       view: true,
-      id: "Risadas Palhaço"
+      id: "Risadas Palhaço",
+      array: [
+        { message: "Mensagem 1 do Risadas Palhaço", direction: "right" },
+        { message: "Mensagem 2 do Risadas Palhaço", direction: "left" },
+        { message: "Mensagem 3 do Risadas Palhaço", direction: "right" },
+      ]
     },
+
     {
       perfil: "FM",
       thumbnail: "",
       name: "Fatal Mortal",
       message: "Uhuuuu",
       view: false,
-      id: "Fatal Mortal"
+      id: "Fatal Mortal",
+      array: [
+        { message: "Mensagem 1 do Fatal Mortal", direction: "right" },
+        { message: "Mensagem 2 do Fatal Mortal", direction: "left" },
+        { message: "Mensagem 3 do Fatal Mortal", direction: "right" },
+      ]
     },
+
     {
       perfil: "GS",
       thumbnail: "",
       name: "Gustavo Scarpim2",
       message: "Clonando WathsApp",
       view: true,
-      id: "Gustavo Scarpim2"
+      id: "Gustavo Scarpim2",
+      array: [
+        { message: "Mensagem 1 do Gustavo Scarpim2", direction: "right" },
+        { message: "Mensagem 2 do Gustavo Scarpim2", direction: "left" },
+        { message: "Mensagem 3 do Gustavo Scarpim2", direction: "right" },
+      ]
     },
+
     {
       perfil: "SP",
       thumbnail: "",
       name: "Scarpim Prof2",
       message: "Olá, tudo bem?",
       view: false,
-      id: "Scarpim Prof2"
+      id: "Scarpim Prof2",
+      array: [
+        { message: "Mensagem 1 do Scarpim Prof2", direction: "right" },
+        { message: "Mensagem 2 do Scarpim Prof2", direction: "left" },
+        { message: "Mensagem 3 do Scarpim Prof2", direction: "right" },
+      ]
     },
+
     {
       perfil: "DG",
       thumbnail: "",
       name: "Diogo Genuino2",
       message: "Hahahaha",
       view: true,
-      id: "Diogo Genuino2"
+      id: "Diogo Genuino2",
+      array: [
+        { message: "Mensagem 1 do Diogo Genuino2", direction: "right" },
+        { message: "Mensagem 2 do Diogo Genuino2", direction: "left" },
+        { message: "Mensagem 3 do Diogo Genuino2", direction: "right" },
+      ]
     },
+
     {
       perfil: "NT",
       thumbnail: "",
       name: "Natan Teves2",
       message: "Opa",
       view: false,
-      id: "Natan Teves2"
+      id: "Natan Teves2",
+      array: [
+        { message: "Mensagem 1 do Natan Teves2", direction: "right" },
+        { message: "Mensagem 2 do Natan Teves2", direction: "left" },
+        { message: "Mensagem 3 do Natan Teves2", direction: "right" },
+      ]
     },
+
     {
       perfil: "BR",
       thumbnail: "",
       name: "Brasil2",
       message: "Pelé",
       view: false,
-      id: "Brasil2"
+      id: "Brasil2",
+      array: [
+        { message: "Mensagem 1 do Brasil2", direction: "right" },
+        { message: "Mensagem 2 do Brasil2", direction: "left" },
+        { message: "Mensagem 3 do Brasil2", direction: "right" },
+      ]
     },
+
     {
       perfil: "RM",
       thumbnail: "",
       name: "Rodrigo Marcelo2",
       message: "Eae!",
       view: true,
-      id: "Rodrigo Marcelo2"
+      id: "Rodrigo Marcelo2",
+      array: [
+        { message: "Mensagem 1 do Rodrigo Marcelo2", direction: "right" },
+        { message: "Mensagem 2 do Rodrigo Marcelo2", direction: "left" },
+        { message: "Mensagem 3 do Rodrigo Marcelo2", direction: "right" },
+      ]
     },
+
     {
       perfil: "JS",
       thumbnail: "",
       name: "Jacaré Sujo2",
       message: "Nham Nham Nham Nham",
       view: true,
-      id: "Jacaré Sujo2"
+      id: "Jacaré Sujo2",
+      array: [
+        { message: "Mensagem 1 do Jacaré Sujo2", direction: "right" },
+        { message: "Mensagem 2 do Jacaré Sujo2", direction: "left" },
+        { message: "Mensagem 3 do Jacaré Sujo2", direction: "right" },
+      ]
     },
+
     {
       perfil: "CQ",
       thumbnail: "",
       name: "Cachorro Quente2",
       message: "Opa",
       view: true,
-      id: "Cachorro Quente2"
+      id: "Cachorro Quente2",
+      array: [
+        { message: "Mensagem 1 do Cachorro Quente2", direction: "right" },
+        { message: "Mensagem 2 do Cachorro Quente2", direction: "left" },
+        { message: "Mensagem 3 do Cachorro Quente2", direction: "right" },
+      ]
     },
+
     {
       perfil: "RP",
       thumbnail: "",
       name: "Risadas Palhaço2",
       message: "KKKKKKKK",
       view: true,
-      id: "Risadas Palhaço2"
+      id: "Risadas Palhaço2",
+      array: [
+        { message: "Mensagem 1 do Risadas Palhaço2", direction: "right" },
+        { message: "Mensagem 2 do Risadas Palhaço2", direction: "left" },
+        { message: "Mensagem 3 do Risadas Palhaço2", direction: "right" },
+      ]
     },
+
     {
       perfil: "FM",
       thumbnail: "",
       name: "Fatal Mortal2",
       message: "Uhuuuu",
       view: false,
-      id: "Fatal Mortal2"
+      id: "Fatal Mortal2",
+      array: [
+        { message: "Mensagem 1 do Fatal Mortal2", direction: "right" },
+        { message: "Mensagem 2 do Fatal Mortal2", direction: "left" },
+        { message: "Mensagem 3 do Fatal Mortal2", direction: "right" },
+      ]
     },
+
   ]);
 
-  const [perfilId, setPerfilId] = useState("AAAAAAAAAAAAAA");
+  const [perfilId, setPerfilId] = useState("");
   return (
     <S.Container>
       <S.Sidenav>
@@ -230,6 +524,9 @@ export default function Card() {
               thumbnail={item.thumbnail}
               name={item.name}
               id={item.id}
+              array={item.array}
+              view={true}
+              date={""}
             />
           }
         </>
@@ -238,3 +535,4 @@ export default function Card() {
     </S.Container>
   )
 }
+// "/img/intro-connection-light_c98cc75f2aa905314d74375a975d2cf2.jpg"

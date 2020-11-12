@@ -5,9 +5,10 @@ export const Container = styled.div`
   flex-direction: column-reverse;
   width: 100%;
   height: 100%;
-  min-height: 87vh;
-  position: relative;
-  overflow: auto;
+  /* min-height: 87vh; */
+  /* position: relative; */
+  overflow-x: hidden;
+  overflow-y: auto;
 
    aside {
     display: flex;
@@ -79,7 +80,7 @@ export const ContainerMessages = styled.div`
   width: 100%;
   overflow: auto;
   display: flex;
-  flex-direction: column;
-  margin: 0px 0px 0px 0px;
+  flex-direction: column-reverse;
+  margin: -20px 0px 0px 0px;
 
 `

@@ -6,7 +6,8 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 1435px;
-  min-width: 645px;
+  /* min-width: 645px; */
+  overflow: auto;
   animation: _2rw5W .3s cubic-bezier(.1,.82,.25,1);
   
   @keyframes _2rw5W {
